@@ -1,0 +1,72 @@
+<style>
+    .heading-animation {
+        position: relative;
+        width: 100%;
+    }
+    #heading-left{
+    position: absolute;
+    /* width: 200px; */
+    left: 0;
+    top: 10px;
+    /* height: 200px; */
+
+}
+#heading-right{
+    position: absolute;
+    /* width: 200px; */
+    right: 0;
+    top: 50px;
+    /* height: 200px; */
+   
+}
+h2 {
+    font-size: 40px;
+}
+</style>
+
+
+<style>
+    section {
+        min-height: 50vh
+    }
+</style>
+
+<section style="min-height:100px !important; background: black;">
+nav</section>
+<section>
+<div class="heading-animation" style="width: 100%">
+    <div id="heading-left">
+      <h2>Party of one, </h2>
+    </div>
+    <div id="heading-right">
+        <h2>friend of many</h2>
+    </div>
+</div>
+</section>
+<section style="background:yellow"></section>
+<section style="background:orange"></section>
+<section style="background:yellow"></section>
+<section style="background:orange"></section>
+<section style="background:yellow"></section>
+<section style="background:orange"></section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var hleft = document.querySelector('#heading-left');
+        var hright = document.querySelector('#heading-right');
+
+        window.addEventListener('scroll', function () {
+            var s = window.scrollY;
+            var d = document.documentElement.scrollHeight;
+            var c = window.innerHeight;
+
+            var scrollPercent = s / (d - c);
+
+            var position = scrollPercent * (document.documentElement.clientWidth / 2 - hleft.offsetWidth) + 0.3 * hleft.offsetWidth;
+            var position2 = scrollPercent * (document.documentElement.clientWidth / 2 - hright.offsetWidth) + 0.3 * hright.offsetWidth;
+
+            hleft.style.left = position + 'px';
+            hright.style.right = position2 + 'px';
+        });
+    });
+</script>

@@ -1,0 +1,125 @@
+/**********************
+ * CUSTOM CSS
+**********************/
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Apfel";
+  src: url("https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/647ff264c56bf96b708620b3/1686106724654/ApfelGrotezk-Regular.otf")
+      format("otf"),
+    url("https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/647ff2c4b71e422673c726d9/1686106820208/ApfelGrotezk-Regular.woff2")
+      format("woff2"),
+    url("https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/647ff26da181af10b7834c2e/1686106733422/ApfelGrotezk-Regular.woff")
+      format("woff");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.btn {
+  font-family: "Apfel" !important;
+}
+
+@media screen and (max-width: 767px) {
+  .user-items-list-carousel__slide {
+    width: 80% !important;
+  }
+}
+
+.footer--btn-container {
+  text-align: center;
+  button {
+    margin: 10px;
+  }
+}
+
+/**********************
+ * STICKY HEADINGS
+**********************/
+
+@media screen and (min-width: 768px) {
+  /* HOME */
+  // studio heading
+  .fe-block.fe-block-060668d62c008d1b0271 {
+    position: sticky;
+    top: 50px;
+    height: 500px;
+  }
+
+  .fe-block.fe-block-yui_3_17_2_1_1686073679286_52297 {
+    position: sticky;
+    top: 100px;
+  }
+  .fe-block.fe-block-yui_3_17_2_1_1686068638699_15195,
+  .fe-block.fe-block-yui_3_17_2_1_1686068638699_12249 {
+    position: sticky;
+    top: 400px;
+  }
+
+  .fe-647f5f161d03d4536548d9dd,
+  .fe-647f6c39c2275a7d8b3d048b {
+    --cell-max-width: 100%;
+  }
+
+  .fe-block.fe-block-yui_3_17_2_1_1686068638699_73955 {
+    position: sticky;
+    top: 50px;
+  }
+
+  .fe-block.fe-block-yui_3_17_2_1_1686068638699_118810 {
+    position: sticky;
+    will-change: transform;
+    top: 200px;
+  }
+
+  /* ABOUT PAGE */
+  // studio heading
+  .fe-block.fe-block-8ff84592f8a0ca2c3cd6 {
+    position: sticky;
+    will-change: transform;
+    top: 100px;
+  }
+}
+
+/**********************
+ * WM TAB STYLES
+**********************/
+
+.wm-tabs-block {
+  --tab-position: start; // start, center, or end
+  --content-width: 100%;
+
+  .wm-tab-button {
+    padding: 0.5em 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid currentColor;
+    box-shadow: var(--tabs-shadow-low);
+  }
+  .wm-tab-button.active {
+    background: white;
+  }
+  nav {
+    padding: 17px;
+    gap: 8px;
+  }
+  article {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav > span {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    --tab-position: start;
+  }
+}
