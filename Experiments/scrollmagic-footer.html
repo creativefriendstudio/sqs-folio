@@ -72,8 +72,7 @@
         .footer-trigger {
             width: 100%;
             height: 1px;
-            color: pink;
-            margin-top: -500px;
+            margin-top: -400px;
             z-index: 99;
             position: absolute;
         }
@@ -134,31 +133,29 @@
 
     var headingAnim = new ScrollMagic.Controller();
 
-    var leftscene = new ScrollMagic.Scene({ triggerElement: "#partytrig", duration: 100 })
+    var headingLeft = new ScrollMagic.Scene({ triggerElement: "#partytrig", duration: "25%" })
         .setTween("#animateleft", 1, { left: '40%' })
         .addIndicators({ name: "start left" })
         .addTo(headingAnim);
 
-
-
-    var rightscene = new ScrollMagic.Scene({ triggerElement: "#partytrig", duration: 100 })
+    var headingRightt = new ScrollMagic.Scene({ triggerElement: "#partytrig", duration: "25%" })
         .setTween("#animateright", 1, { right: '40%' })
         .addTo(headingAnim);
 
 
 
+
     var footerAnim = new ScrollMagic.Controller();
 
-    var leftLogo = new ScrollMagic.Scene({ triggerElement: ".footer-trigger", duration: 100 })
+    var logoLeft = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
         .setTween(".footer-left", 1, { x: 0 })
         .addIndicators({ name: "footer start" })
         .addTo(footerAnim);
 
-
-
-    var rightLogo = new ScrollMagic.Scene({ triggerElement: ".footer-trigger", duration: 100 })
-        .setTween(".footer-right", 1, { x: "0" })
+    var logoRight = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
+        .setTween(".footer-right", 1, { x: 0 })
         .addTo(footerAnim);
+
 
 
 

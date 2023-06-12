@@ -8,7 +8,7 @@ While Bootstrap & Wordpress still has a special place in our coding hearts. We d
 
 ## Experiments
 
-In this folder are some code snippets for various parts of our site. No styling - just div blocks. I also may or may not have got ChatGPT to convert this (https://codepen.io/maryambafandkar/pen/WNrJxR) jQuery code into VanillaJS.
+In this folder are some code snippets for various parts of our site. No styling - just div blocks. I also may or may not have got ChatGPT to convert this (https://codepen.io/maryambafandkar/pen/WNrJxR) jQuery code into VanillaJS. Please note, many are also broken. Enjoy!
 
 ## Let's Chat
 

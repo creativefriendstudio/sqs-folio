@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .footer div {
+            height: 100%;
+            transition: transform 0.5s, left 0.5s, right 0.5s;
+            position: absolute;
+            top: 0;
+        }
+
+        .footer-left {
+            width: 54.85%;
+            left: -54.85%;
+            background-color: pink;
+        }
+
+        .footer-right {
+            width: 40%;
+            right: -40%;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section style="background: yellow; height: 100vh;"></section>
+    <section style="background: orange; height: 100vh;"></section>
+    <section style="background: yellow; height: 100vh;"></section>
+    <section style="background: orange; height: 100vh;"></section>
+    <section style="background: yellow; height: 100vh;"></section>
+    <section style="background: orange; height: 100vh;"></section>
+
+    <div class="footer">
+
+        <div class="footer-left"></div>
+        <div class="footer-right"></div>
+
+
+        "
+    </div>
+    <div style="height: 500px;">stuff at the bottom</div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var footer = document.querySelector(".footer");
+            var footerLeft = document.querySelector(".footer-left");
+            var footerRight = document.querySelector(".footer-right");
+
+            var scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var footerTop = footer.getBoundingClientRect().top;
+
+            if (footerTop <= window.innerHeight && footerTop >= 0) {
+                var progress = (window.innerHeight - footerTop) / footer.offsetHeight;
+                footerLeft.style.left = (-54.85 + 54.85 * progress) + "%";
+                footerRight.style.right = (-40 + 40 * progress) + "%";
+            } else {
+                footerLeft.style.left = "-54.85%";
+                footerRight.style.right = "-40%";
+            }
+        });
+    </script>
+</body>
+
+</html>

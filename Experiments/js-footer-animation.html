@@ -1,0 +1,237 @@
+<style>
+    html,
+    body {
+        padding: 0px;
+    }
+
+    .heading-animation {
+        position: relative;
+        width: 100%;
+    }
+
+    #heading-left {
+        position: absolute;
+        /* width: 200px; */
+        left: 0;
+        top: 10px;
+        /* height: 200px; */
+
+    }
+
+    #heading-right {
+        position: absolute;
+        /* width: 200px; */
+        right: 0;
+        top: 50px;
+        /* height: 200px; */
+
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .footer-logo {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .footer-logo svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-logo .footer-left {
+        width: 54.85%;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .footer-logo .footer-right {
+        width: 40%;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    section {
+        min-height: 50vh;
+        position: relative;
+        overflow: hidden;
+    }
+</style>
+<main id="main">
+    <section style="min-height:100px !important; background: black;">
+        nav</section>
+    <section>
+        <div class="heading-animation" style="width: 100%">
+            <div id="heading-left">
+                <h2>Party of one, </h2>
+            </div>
+            <div id="heading-right">
+                <h2>friend of many</h2>
+            </div>
+        </div>
+    </section>
+    <section style="background:yellow"></section>
+    <section style="background:orange"></section>
+    <section style="background:yellow"></section>
+    <section style="background:orange"></section>
+    <section style="background:yellow"></section>
+    <section style="background:orange"></section>
+</main>
+
+<!-- FOOTER -->
+<section class="footer" style="min-height: auto !important;">
+    <div class=" footer-logo">
+        <div class="footer-left">
+            <svg width="500" height="74" viewBox="0 0 500 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M34.7336 1.07159C50.4174 1.07159 61.7225 10.2998 64.4029 24.0909L54.3767 27.4671C52.6887 17.9422 45.3429 11.5889 34.6313 11.5889C20.4412 11.5889 10.9163 22.6995 10.9163 36.2042C10.9163 52.1847 20.7378 62.9987 35.5316 62.9987C46.9389 62.9987 56.3717 55.653 57.5585 44.3377L68.2804 46.6191C66.49 62.3951 52.6989 73.5159 35.726 73.5159C14.1901 73.5159 0 58.2311 0 37.4933C0 16.7554 13.6991 1.07159 34.7336 1.07159Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M114.176 2.56531C127.476 2.56531 135.814 11.3024 135.814 23.4055C135.814 32.9303 130.852 40.2761 122.32 43.1509L136.111 72.1246H124.202L111.199 44.3377H94.1337V72.0222H83.2174V2.56531H114.176ZM124.898 23.4055C124.898 17.0521 120.631 13.0826 113.49 13.0826H94.1337V33.8204H113.49C120.631 33.8204 124.898 29.9532 124.898 23.3952V23.4055Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M253.284 2.56531L281.664 72.0325H269.653L262.216 53.4738H231.554L224.014 72.0325H212.105L240.485 2.56531H253.284ZM246.839 15.4664L235.728 43.0588H257.96L246.849 15.4664H246.839Z"
+                    fill="#E84A3B" />
+                <path d="M336.072 2.56531V13.0826H313.349V72.0325H302.433V13.0826H279.71V2.56531H336.082H336.072Z"
+                    fill="#E84A3B" />
+                <path d="M359.746 2.56531V72.0325H348.83V2.56531H359.746Z" fill="#E84A3B" />
+                <path
+                    d="M500 2.56531V13.0826H462.392V31.2423H495.938V41.7595H462.392V61.505H500V72.0223H451.475V2.56531H500Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M185.873 73.3318C173.167 73.3318 163.243 70.0682 156.388 63.6228C147.017 54.8141 146.761 46.2304 148.193 40.5728C148.991 37.4217 150.526 34.5366 152.388 32.1119C150.751 28.04 150.229 23.5794 150.996 19.3132C152.245 12.3971 156.613 6.94411 163.314 3.97718C179.418 -3.16392 201.885 3.45541 210.478 13.9113L202.376 20.5715C194.917 11.4968 175.98 9.83943 167.57 13.5737C163.192 15.5175 161.749 18.7812 161.319 21.1752C161.084 22.4847 161.084 23.8556 161.299 25.2163C161.299 25.2163 161.319 25.2163 161.33 25.2163C164.286 23.9477 182.037 17.0726 196.237 28.7153C200.34 32.0812 202.13 36.9101 201.025 41.6368C199.9 46.4657 196.012 50.2 190.897 51.3867C180.707 53.7398 168.021 49.76 158.956 41.4424C158.68 42.0767 158.455 42.7519 158.301 43.4579C157.37 47.6116 159.15 51.8267 163.58 55.9906C168.491 60.6047 176.144 62.8759 186.293 62.8555C186.845 62.835 193.004 62.569 197.874 60.9014L201.281 70.8253C194.662 73.0965 186.876 73.3318 186.549 73.342H186.446C186.262 73.342 186.078 73.342 185.894 73.342L185.873 73.3318ZM166.762 34.3422C173.228 39.8975 181.934 42.6803 188.533 41.1559C189.966 40.8285 190.661 39.918 190.815 39.2325C191.04 38.2504 190.273 37.3705 189.587 36.8078C181.402 30.0964 170.588 32.9917 166.762 34.332V34.3422Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M406.194 73.3318C397.733 73.3318 386.458 67.9708 380.75 42.4347C377.466 27.7433 376.985 11.1899 376.985 2.62667H387.471C387.471 32.6029 393.262 62.8554 406.194 62.8554C414 62.8554 419.801 50.7933 422.942 40.0612C417.233 38.8642 411.381 36.8589 407.483 33.5135C402.316 28.9505 398.439 20.592 401.303 12.0697C404.015 3.9976 412.496 -0.452805 421.489 1.49105L421.816 1.5729C436.293 5.70614 436.804 19.0267 435.924 28.6948C435.873 29.2882 435.771 30.1373 435.607 31.1809C437.285 31.2934 438.85 31.3445 440.211 31.3548V41.8414C439.454 41.8414 436.876 41.8209 433.408 41.5344C432.456 45.0743 431.188 48.962 429.561 52.7985C422.338 69.7817 412.874 73.3522 406.214 73.3522L406.194 73.3318ZM417.315 11.5275C415.013 11.5275 412.25 12.3664 411.237 15.3947C409.907 19.3643 411.851 23.3747 414.368 25.5948C416.609 27.5182 420.711 28.8891 425.223 29.8099C425.336 29.0631 425.417 28.3674 425.469 27.7331C426.614 15.1287 422.982 12.837 419.105 11.7014C418.583 11.5991 417.959 11.5275 417.315 11.5275Z"
+                    fill="#E84A3B" />
+            </svg>
+
+        </div>
+        <div class="footer-right">
+            <svg width="366" height="74" viewBox="0 0 366 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M93.7168 1.80415C107.017 1.80415 115.355 10.5413 115.355 22.6443C115.355 32.1692 110.393 39.5149 101.861 42.3898L115.652 71.3634H103.743L90.7396 43.5765H73.6747V71.2611H62.7584V1.79391H93.7168V1.80415ZM104.439 22.6443C104.439 16.291 100.172 12.3214 93.0314 12.3214H73.6747V33.0593H93.0314C100.172 33.0593 104.439 29.192 104.439 22.6341V22.6443Z"
+                    fill="#E84A3B" />
+                <path d="M142.426 1.80414V71.2713H131.509V1.80414H142.426Z" fill="#E84A3B" />
+                <path
+                    d="M210.041 1.80415V12.3214H172.433V30.4811H205.979V40.9984H172.433V60.7438H210.041V71.2611H161.516V1.79391H210.041V1.80415Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M331.767 1.80414C351.513 1.80414 365.017 17.1913 365.017 36.64C365.017 56.0888 351.523 71.2713 331.767 71.2713H306.456V1.80414H331.767ZM353.702 36.64C353.702 22.8489 344.576 12.7204 331.675 12.7204H317.383V60.355H331.675C344.576 60.355 353.702 50.4312 353.702 36.64Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M242.176 73.5732C233.807 73.5732 224.855 66.3912 224.855 46.2467C224.855 33.315 227.495 22.8898 232.713 15.1144C228.559 13.3649 225.142 13.2933 225.101 13.2933L225.142 2.80675C225.295 2.80675 232.426 2.90906 240.109 7.14461C250.913 -1.28557 262.893 0.105813 264.275 0.300199C272.725 1.48697 279.212 5.35422 283.549 11.7996C291.673 23.8413 292.061 44.0369 284.726 73.5323L274.546 71.0053C282.629 38.5225 279.171 24.0664 274.853 17.6721C272.173 13.6923 268.336 11.4722 262.801 10.6947C260.09 10.3059 254.207 10.6435 248.714 13.9379C254.514 20.3321 259.098 30.4095 259.098 46.2672C259.098 62.125 251.977 73.5835 242.176 73.5835V73.5732ZM241.225 21.2631C237.316 27.2788 235.342 35.6374 235.342 46.2467C235.342 56.1604 238.155 63.0866 242.176 63.0866C244.365 63.0866 248.611 57.1426 248.611 46.257C248.611 35.3714 246.125 26.931 241.214 21.2631H241.225Z"
+                    fill="#E84A3B" />
+                <path
+                    d="M48.6194 1.80414V12.3214H11.3997V32.5682H44.5476V43.0854H11.3997V71.2713H0.493698V1.80414H48.6194Z"
+                    fill="#E84A3B" />
+            </svg>
+
+        </div>
+    </div>
+
+
+
+    <div>stuff at the bottom</div>
+</section>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var hleft = document.querySelector('#heading-left');
+        var hright = document.querySelector('#heading-right');
+
+        window.addEventListener('scroll', function () {
+            var s = window.scrollY;
+            var d = document.documentElement.scrollHeight;
+            var c = window.innerHeight;
+
+            var scrollPercent = s / (d - c);
+
+            var position = scrollPercent * (document.documentElement.clientWidth / 2 - hleft.offsetWidth) + 0.3 * hleft.offsetWidth;
+            var position2 = scrollPercent * (document.documentElement.clientWidth / 2 - hright.offsetWidth) + 0.3 * hright.offsetWidth;
+
+            hleft.style.left = position + 'px';
+            hright.style.right = position2 + 'px';
+        });
+
+
+
+        //footer
+        // var cfleft = document.querySelector('.footer-left');
+        // var cfright = document.querySelector('.footer-right');
+        // var footer = document.querySelector('.footer');
+
+        // window.addEventListener('scroll', function () {
+        //     var s = window.scrollY;
+        //     var d = document.documentElement.scrollHeight;
+        //     var c = window.innerHeight;
+        //     var footerTop = footer.offsetTop;
+
+        //     var scrollPercent = (s + c) / (d - c);
+
+        //     if (scrollPercent >= footerTop / d) {
+        //         var position = (scrollPercent - (footerTop / d)) * 100;
+
+        //         cfleft.style.transform = 'translateX(' + (-100 + position) + '%)';
+        //         cfright.style.transform = 'translateX(' + (-position) + '%)';
+        //     }
+        // });
+
+        // window.addEventListener("scroll", function () {
+        //     var content = document.querySelector("main");
+        //     var footer = document.querySelector(".footer");
+        //     var div1 = document.querySelector(".footer-left");
+        //     var div2 = document.querySelector(".footer-right");
+
+        //     var scrollHeight = content.offsetHeight - window.innerHeight;
+        //     var footerTop = footer.getBoundingClientRect().top;
+
+        //     if (footerTop <= window.innerHeight && footerTop >= 0) {
+        //         var progress = (window.innerHeight - footerTop) / window.innerHeight;
+        //         div1.style.transform = "translateX(" + (-100 + 100 * progress) + "%)";
+        //         div2.style.transform = "translateX(" + (100 - 100 * progress) + "%)";
+        //     } else {
+        //         div1.style.transform = "translateX(-100%)";
+        //         div2.style.transform = "translateX(100%)";
+        //     }
+        // });
+
+
+
+        window.addEventListener("scroll", function () {
+            var content = document.querySelector("main");
+            var footer = document.querySelector(".footer");
+            var div1 = document.querySelector(".footer-left");
+            var div2 = document.querySelector(".footer-right");
+
+            var contentWidth = content.offsetWidth;
+            var div1Width = div1.offsetWidth;
+            var div2Width = div2.offsetWidth;
+
+            var scrollHeight = content.offsetHeight - window.innerHeight;
+            var footerTop = footer.getBoundingClientRect().top;
+
+            if (footerTop <= window.innerHeight && footerTop >= 0) {
+                var progress = (window.innerHeight - footerTop) / window.innerHeight;
+                div1.style.transform = "translateX(" + (-div1Width + div1Width * progress) + "px)";
+                div2.style.transform = "translateX(" + (div2Width - div2Width * progress) + "px)";
+            } else {
+                div1.style.transform = "translateX(-100%)";
+                div2.style.transform = "translateX(100%)";
+            }
+        });
+
+
+
+
+    });
+</script>
