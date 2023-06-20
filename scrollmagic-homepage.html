@@ -1,0 +1,97 @@
+<div class="party-trigger" style="overflow:hidden">
+    <div class="party-left">
+        <h1>Party of one,</h1>
+    </div>
+
+    <div class="party-right">
+        <h1>friend of many.</h1>
+    </div>
+</div>
+
+
+<div class="doodle-ctn">
+    <div class="doodle-left">
+        <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3d91ae85c00320f48fd/1686545369988/doodle2.png"
+            class="img-fluid">
+        <h4>We've Got Your Back</h4>
+        <div class="text1">We've launched everything from pop-ups and food trucks, to new venues and legacy
+            locations. Whether you're a dusty-aproned sole trader or seasoned restauranteur, you'll want us
+            in your inner circle.</div>
+    </div>
+    <div class="doodle-right">
+        <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3ca6dbc992a22a571b8/1686545354566/doodle1.png"
+            class="img-fluid">
+        <h4>Need a helping hand?</h4>
+        <div class="text1">Starting a new business is hard enough. We know it can be overwhelming and
+            confusing. Why waste your time waiting for replies, you've already found your favourite Creative
+            Friend.</div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+
+
+<script>
+    //////// PARTY ANIMATION ////////
+    var headingAnim = new ScrollMagic.Controller();
+
+    var headingLeft = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.7, duration: "25%" })
+        .setTween(".party-left", 1, { left: '50%' })
+
+        .addTo(headingAnim);
+
+    var headingRight = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.7, duration: "25%" })
+        .setTween(".party-right", 1, { right: '50%' })
+        .addTo(headingAnim);
+
+
+
+
+    //////// DOODLE ANIMATION ////////
+    var doodlePin = new ScrollMagic.Controller();
+
+    var pinHeading = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.1, duration: "100%" })
+        .setPin(".party-trigger", { pushFollowers: false })
+        .addIndicators({ name: "pin heading" })
+        .addTo(doodlePin);
+
+
+
+    var doodleRight = new ScrollMagic.Scene({ triggerElement: ".doodle-right", triggerHook: 0.3, duration: "70%" })
+        .setPin(".doodle-right", { pushFollowers: false })
+        .addIndicators({ name: "doodle" })
+        .addTo(doodlePin);
+
+
+
+
+
+    //////// FOOTER ANIMATION ////////
+
+    var footerAnim = new ScrollMagic.Controller();
+
+    var logoLeft = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
+        .setTween(".footer-left", 1, { x: 0 })
+        .addIndicators({ name: "footer start" })
+        .addTo(footerAnim);
+
+    var logoRight = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
+        .setTween(".footer-right", 1, { x: 0 })
+        .addTo(footerAnim);
+
+
+
+
+
+
+</script>

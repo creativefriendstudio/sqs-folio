@@ -57,14 +57,22 @@
 
         .doodle-ctn {
             margin-top: 15vw;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .doodle-right {
             margin-top: 10vh;
+            flex: 0 0 auto;
+            width: 33.33333333%;
+            margin-left: 8.33333333%;
         }
 
         .doodle-left {
             margin-top: 80vh;
+            flex: 0 0 auto;
+            width: 33.33333333%;
+            margin-left: 16.66666667%;
         }
 
 
@@ -120,7 +128,6 @@
         <div class=" container">
 
             <div class="party-trigger" style="overflow:hidden">
-
                 <div class="party-left">
                     <h1>Party of one,</h1>
                 </div>
@@ -131,26 +138,23 @@
             </div>
 
 
-            <div class="doodle-ctn row">
-
-                <div class="col-4 offset-2 doodle-left">
-                    <img src="doodle2.png" class="img-fluid">
+            <div class="doodle-ctn">
+                <div class="doodle-left">
+                    <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3d91ae85c00320f48fd/1686545369988/doodle2.png"
+                        class="img-fluid">
                     <h4>We've Got Your Back</h4>
                     <div class="text1">We've launched everything from pop-ups and food trucks, to new venues and legacy
                         locations. Whether you're a dusty-aproned sole trader or seasoned restauranteur, you'll want us
                         in your inner circle.</div>
                 </div>
-
-
-                <div class="col-4 offset-1 doodle-right">
-                    <img src="doodle1.png" class="img-fluid">
+                <div class="doodle-right">
+                    <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3ca6dbc992a22a571b8/1686545354566/doodle1.png"
+                        class="img-fluid">
                     <h4>Need a helping hand?</h4>
                     <div class="text1">Starting a new business is hard enough. We know it can be overwhelming and
                         confusing. Why waste your time waiting for replies, you've already found your favourite Creative
                         Friend.</div>
-
                 </div>
-
             </div>
 
 
@@ -220,11 +224,6 @@
             .setPin(".doodle-right", { pushFollowers: false })
             .addIndicators({ name: "doodle" })
             .addTo(doodlePin);
-
-        // var doodleLeft = new ScrollMagic.Scene({ triggerElement: ".doodle-left", triggerHook: 0.3, duration: "70%" })
-        //     .setPin(".doodle-left", { pushFollowers: false })
-        //     .addIndicators({ name: "doodle left" })
-        //     .addTo(doodlePin);
 
 
 

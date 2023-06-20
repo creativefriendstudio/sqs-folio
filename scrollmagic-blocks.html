@@ -1,11 +1,32 @@
 <!-- PARTY OF ONE HEADING -->
-<section id="partytrig">
-    <div id="animateleft">
-        <p>Party of one,</p>
+<section id="homepage-animations">
+    <div class="party-trigger" style="overflow:hidden">
+        <div class="party-left">
+            <h1>Party of one,</h1>
+        </div>
+        <div class="party-right">
+            <h1>friend of many.</h1>
+        </div>
     </div>
 
-    <div id="animateright">
-        <p>friend of many.</p>
+    <div class="doodle-ctn row">
+        <div class="col-4 offset-2 doodle-left">
+            <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3d91ae85c00320f48fd/1686545369988/doodle2.png"
+                class="img-fluid">
+            <h4>We've Got Your Back</h4>
+            <div class="text1">We've launched everything from pop-ups and food trucks, to new venues and legacy
+                locations. Whether you're a dusty-aproned sole trader or seasoned restauranteur, you'll want us
+                in your inner circle.</div>
+        </div>
+        <div class="col-4 offset-1 doodle-right">
+            <img src="https://static1.squarespace.com/static/647f5d01fac7cd217e93e092/t/6486a3ca6dbc992a22a571b8/1686545354566/doodle1.png"
+                class="img-fluid">
+            <h4>Need a helping hand?</h4>
+            <div class="text1">Starting a new business is hard enough. We know it can be overwhelming and
+                confusing. Why waste your time waiting for replies, you've already found your favourite Creative
+                Friend.</div>
+
+        </div>
     </div>
 </section>
 
@@ -70,38 +91,55 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+
+
 <script>
+    //////// PARTY ANIMATION ////////
     var headingAnim = new ScrollMagic.Controller();
 
-    var leftscene = new ScrollMagic.Scene({
-        triggerElement: "main",
-        triggerHook: 0,
-        duration: 100,
-    })
-        .setTween(".partyheadingleft", 1, { left: "50%", opacity: 1 })
-        .addIndicators({ name: "start heading" })
+    var headingLeft = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.7, duration: "25%" })
+        .setTween(".party-left", 1, { left: '50%' })
+
         .addTo(headingAnim);
 
-    var rightscene = new ScrollMagic.Scene({
-        triggerElement: "main",
-        triggerHook: 0,
-        duration: 100,
-    })
-        .setTween(".partyheadingright", 1, { right: "50%", opacity: 1 })
+    var headingRight = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.7, duration: "25%" })
+        .setTween(".party-right", 1, { right: '50%' })
         .addTo(headingAnim);
 
+
+
+
+    //////// DOODLE ANIMATION ////////
+    var doodlePin = new ScrollMagic.Controller();
+
+    var pinHeading = new ScrollMagic.Scene({ triggerElement: ".party-trigger", triggerHook: 0.1, duration: "100%" })
+        .setPin(".party-trigger", { pushFollowers: false })
+        .addIndicators({ name: "pin heading" })
+        .addTo(doodlePin);
+
+
+
+    var doodleRight = new ScrollMagic.Scene({ triggerElement: ".doodle-right", triggerHook: 0.3, duration: "70%" })
+        .setPin(".doodle-right", { pushFollowers: false })
+        .addIndicators({ name: "doodle" })
+        .addTo(doodlePin);
+
+
+    //////// FOOTER ANIMATION ////////
 
     var footerAnim = new ScrollMagic.Controller();
 
-    var leftLogo = new ScrollMagic.Scene({ triggerElement: ".footer-trigger", triggerHook: 1, duration: 200, offset: -200 })
+    var logoLeft = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
         .setTween(".footer-left", 1, { x: 0 })
-        // .addIndicators({ name: "footer" })
+        .addIndicators({ name: "footer start" })
+        .addTo(footerAnim);
+
+    var logoRight = new ScrollMagic.Scene({ triggerElement: ".footer-logo", triggerHook: 1, duration: "25%", })
+        .setTween(".footer-right", 1, { x: 0 })
         .addTo(footerAnim);
 
 
 
-    var rightLogo = new ScrollMagic.Scene({ triggerElement: ".footer-trigger", triggerHook: 1, duration: 200, offset: -200 })
-        .setTween(".footer-right", 1, { x: "0" })
-        .addTo(footerAnim);
+
+
 </script>
