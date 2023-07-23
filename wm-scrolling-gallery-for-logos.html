@@ -1,0 +1,65 @@
+<script>
+    /**
+      *  Gallery Section Auto Scroller
+      **/
+    (function () {
+        setAutoScroll({
+            gallery: 2,
+            direction: 2,
+            timing: 2000,
+        });
+
+        /*
+        * Copy and paste the above code
+        * to target more auto-scrolling
+        * sections
+        **/
+
+        /** gallery
+        * gallery section order on the page. Ex:
+        * 1 = the first gallery section on a page,
+        * 2 = the second gallery section on a page
+        **/
+
+        /** direction
+        * direction the gallery should go in.
+        * 1 = backwards,
+        * 2 = forwards
+        **/
+
+        /** timing
+        * timing between each slide, in milliseconds. Ex:
+        * 2000 = 2 seconds
+        **/
+
+        function setAutoScroll(settings) {
+            function init() {
+                let section = document.querySelectorAll(".page-section.gallery-section")[settings.gallery - 1];
+
+                function clickArrow() {
+                    if (section && !document.querySelector("html.sqs-modal-lightbox-open") && !document.hidden && !document.querySelector("body.sqs-edit-mode")) {
+                        let arrow = section.querySelectorAll(".gallery-reel-control .gallery-reel-control-btn")[settings.direction - 1];
+                        if (arrow) arrow.click();
+                    }
+                }
+
+                window.setInterval(clickArrow, settings.timing);
+            }
+
+            window.addEventListener("DOMContentLoaded", init);
+        }
+    })();
+
+
+</script>
+
+<style>
+    .gallery-reel[data-section-id="6486ba6f088f9e3a690fdb34"] {
+        height: clamp(30px, 25vw, 35px) !important;
+    }
+
+    .gallery-reel[data-section-id="6486ba6f088f9e3a690fdb34"] .gallery-reel-item {
+        padding: 0 50px !important;
+        margin: 0 50px !important;
+    }
+</style>
