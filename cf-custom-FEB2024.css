@@ -1,0 +1,170 @@
+:root {
+	--heading-font-font-family: "Apfel";
+	--body-font-font-family: "Apfel";
+	--meta-font-font-family: "Apfel";
+	--dark-bg: #c2b29a;
+	--cf-red: #e84a3b;
+	--light-bg: #f6f3ec;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/** TYPOGRAPHY **/
+@font-face {
+	font-family: "Apfel";
+	font-weight: 400;
+	src: url("https://static1.squarespace.com/static/65d56fca43a47e6130a1fab1/t/65d684307aa62f228eff92df/1708557360656/ApfelGrotezk-Regular.otf") format("otf"), url("https://static1.squarespace.com/static/65d56fca43a47e6130a1fab1/t/65d683a50ab1f0122abb04a0/1708557221171/ApfelGrotezk-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Apfel";
+	font-weight: 800;
+	src: url("https://static1.squarespace.com/static/65d56fca43a47e6130a1fab1/t/65d68430db8a972542c6eea0/1708557360647/ApfelGrotezk-Mittel.otf") format("otf"), url("https://static1.squarespace.com/static/65d56fca43a47e6130a1fab1/t/65d683a4b8da3578edb50eb1/1708557221145/ApfelGrotezk-Mittel.woff2") format("woff2");
+}
+
+h4 {
+	text-transform: uppercase;
+}
+
+.sqs-block-summary-v2 .img-wrapper,
+.sqs-block-summary-v2 .sqs-video-wrapper {
+	border-radius: 10px;
+}
+
+/** HEADER **/
+.header-display-desktop,
+.header-display-mobile .header-nav {
+	display: none !important;
+}
+
+.header-display-mobile,
+.header-burger {
+	display: flex !important;
+}
+
+.header-burger button .burger-box {
+	display: none !important;
+}
+.header .header-announcement-bar-wrapper {
+	z-index: 9999;
+}
+.header-burger button:after {
+	content: "Menu";
+}
+
+.header-burger button.burger--active:after {
+	content: "Close";
+}
+
+.header-burger {
+	order: 1;
+}
+
+.header-actions.header-actions--right {
+	order: 2;
+	display: flex;
+}
+.header--menu-open .header-actions.header-actions--right {
+	display: none;
+}
+.header-menu {
+	transition: all 0.5s ease-in-out;
+	left: auto;
+	opacity: 1 !important;
+	overflow: hidden;
+	z-index: 2;
+	visibility: visible !important;
+	transform: translateX(40vw);
+}
+@media screen and (min-width: 800px) {
+	.header-menu {
+		width: 40vw !important;
+	}
+}
+
+.header-menu::before {
+	content: "";
+	background: var(--dark-bg);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	transition: all 0.5 ease-in-out;
+}
+
+.header--menu-open .header-menu::before {
+	opacity: 0.5 !important;
+}
+
+.header--menu-open .header-menu {
+	transform: translateX(0vw);
+}
+
+.site-wrapper .header-menu .header-menu-bg,
+.header-menu {
+	background: var(--light-bg) !important;
+}
+
+.header-menu-nav-folder-content {
+	justify-content: end;
+}
+.header-menu-nav-item a:not(.btn):hover {
+	color: var(--cf-red) !important;
+}
+.header-menu-nav-wrapper .header-menu-nav-item:nth-child(4) {
+	margin-bottom: 50px;
+}
+.header-menu-nav-item .header-menu-nav-item-content .chevron:after {
+	content: "→";
+	background-color: #000000;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	position: relative;
+	display: inline-block;
+}
+.header-menu-nav-item .header-menu-nav-item-content .chevron {
+	transform: none !important;
+	border: 0px !important;
+	margin: 0px !important;
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+}
+.header-menu-controls a,
+.header-menu-nav-wrapper .header-menu-nav-item:nth-child(5) a,
+.header-menu-nav-wrapper .header-menu-nav-item:nth-child(6) a,
+.header-menu-nav-wrapper .header-menu-nav-item:nth-child(7) a,
+.header-menu-nav-wrapper .header-menu-nav-item:nth-child(8) a,
+.header-menu-nav-wrapper .header-menu-nav-item:last-child a {
+	display: flex;
+	font-size: 16px !important;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.header-menu-controls {
+	opacity: 1;
+}
+.header-menu-controls a:after {
+	content: "Checkout our stuff 👇 ";
+}
+
+.header-menu-cta a {
+	margin: 50px 6vw;
+}
+
+/** CONTENT BLOCKS **/
+
+/** FOOTER **/
+
+.footer--btn-container {
+	text-align: center;
+}
+.footer--btn-container a {
+	margin: 0px 10px;
+}
