@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Overused Grotesk";
+  src: url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6699d7676c891b6ec5130710/1721358184708/OverusedGrotesk-VF.woff2") format("woff2 supports variations"), url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6699d7671cfd5c741af70e05/1721358184709/OverusedGrotesk-VF.woff") format("woff2"), url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6699d7671cfd5c741af70e05/1721358184709/OverusedGrotesk-VF.woff") format("woff2 supports variations"), url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6699d7671cfd5c741af70e05/1721358184709/OverusedGrotesk-VF.woff") format("woff"), url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/66fcca740a81951f2cd2fc69/1727842933035/OverusedGrotesk-VF.ttf") format("woff2 supports variations"), url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6699d7671cfd5c741af70e05/1721358184709/OverusedGrotesk-VF.woff") format("ttf");
+  font-weight: 400;
+}
+strong,
+b {
+  font-weight: 400;
+}
+:root {
+  --dark-bg: #c2b29a;
+  --cf-primary: #7e57c2;
+  --light-bg: #f7f5ed;
+  --border-radius: 10px;
+  --highlight: #ebff64;
+  --transition: all 0.5s ease-in-out;
+  --body-font-font-family: "Overused Grotesk", neue-haas-grotesk-display;
+  --heading-font-font-family: var(--body-font-font-family);
+  --meta-font-font-family: var(--body-font-font-family);
+  --header-button-font-font-family: var(--body-font-font-family);
+  --primary-button-font-font-family: var(--body-font-font-family);
+  --secondary-button-font-font-family: var(--body-font-font-family);
+  --tertiary-button-font-font-family: var(--body-font-font-family);
+}
+html {
+  scroll-behavior: smooth;
+}
+h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  border: 1px solid #000;
+  padding: 5px 30px;
+  border-radius: 30px;
+  width: auto;
+  display: inline-block;
+  margin: 0px;
+}
+.list-item-media-inner,
+.sqs-block-summary-v2 .img-wrapper,
+.sqs-block-summary-v2 .sqs-video-wrapper,
+.sqs-block-summary-v2 .summary-thumbnail-container img,
+.sqs-image-content {
+  border-radius: var(--border-radius);
+}
+.header .header-announcement-bar-wrapper {
+  padding-bottom: 40px !important;
+  padding-top: 20px !important;
+}
+.header-title-nav-wrapper {
+  flex: 1 1 100%;
+}
+.header-display-desktop .header-title {
+  display: none;
+}
+.header-layout-nav-center .header-nav {
+  width: 100%;
+  flex: 1 1 100%;
+}
+.header-layout-nav-center .header-nav .header-nav-item {
+  margin: 0px;
+}
+.header-layout-nav-center .header-nav-list {
+  justify-content: space-between;
+  width: 100%;
+}
+.header-layout-nav-center .header-nav-list a {
+  text-transform: uppercase;
+}
+.header-layout-nav-center .header-actions {
+  display: none;
+}
+header .header-nav .header-nav-item--homepage a {
+  position: relative;
+  visibility: hidden;
+}
+header .header-nav .header-nav-item--homepage a:before {
+  position: absolute;
+  visibility: visible;
+  width: 123px;
+  height: 20px;
+  left: 0px;
+  top: 0px;
+  content: "Hi friend!";
+  text-align: left;
+}
+header.shrink .header-nav .header-nav-item--homepage a::before {
+  content: "";
+  background: url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6793361c6b08236a94d96837/1737700892905/CF-black.png") no-repeat;
+  background-size: contain;
+}
+
+#footer-sections {
+  z-index: 10;
+}
+
+.project-thumb__ctn,
+section.blog-item-summary,
+.sqs-block-summary-v2 .summary-content,
+.sqs-gallery .meta-inside,
+.list-item-content .list-item-content__text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.project-thumb__title,
+section.blog-item-summary h1.blog-title,
+.sqs-block-summary-v2 .summary-content .summary-title,
+.sqs-gallery .meta-inside h3.meta-title,
+.list-item-content .list-item-content__text-wrapper h2.list-item-content__title {
+  order: 2;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: var(--small-text-size);
+  font-weight: 500;
+  text-align: left;
+  margin-top: 5px;
+  letter-spacing: 0.01em;
+}
+.project-thumb__description,
+section.blog-item-summary .blog-excerpt,
+.sqs-block-summary-v2 .summary-content .summary-excerpt,
+.sqs-gallery .meta-inside .meta-description,
+.list-item-content .list-item-content__text-wrapper .list-item-content__description {
+  order: 1;
+  margin-top: 0 !important;
+  text-align: left;
+  font-weight: 400;
+}
+.project-thumb__description p,
+section.blog-item-summary .blog-excerpt p,
+.sqs-block-summary-v2 .summary-content .summary-excerpt p,
+.sqs-gallery .meta-inside .meta-description p,
+.list-item-content .list-item-content__text-wrapper .list-item-content__description p {
+  font-size: var(--large-text-size);
+  letter-spacing: var(--body-font-letter-spacing);
+  line-height: 1.2em;
+}
+.blog-meta-section {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.blog-meta-section .blog-categories-list a {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: var(--small-text-size);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 2px 10px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background: rgba(225, 225, 225, 0.4);
+  margin-right: 3px;
+  transition: var(--transition);
+  transition-duration: 0.2s;
+}
+.blog-meta-section .blog-categories-list a:after {
+  display: none;
+}
+.blog-meta-section .blog-categories-list a:hover {
+  background: var(--highlight);
+}
+.blog-meta-section .blog-categories-list .blog-categories--comma {
+  display: none;
+}
+.blog-image-wrapper a img {
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+}
+.entry:hover > .blog-image-wrapper a img {
+  transform: scale(1.05);
+}
+.entry:hover > .blog-item-summary .blog-meta-section {
+  opacity: 1;
+}
+.sqs-gallery .meta {
+  margin-bottom: 40px;
+}
+section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
+  margin: 0px !important;
+  padding: 0px;
+}
+.gallery-reel-item-src {
+  width: calc(100% - 20px) !important;
+}
+.page-section .content {
+  position: relative;
+}
+
+.btn-list {
+  text-align: center;
+}
+.btn-list a.btn_yes:hover:after {
+  content: ", please save me";
+}
+.btn-list a.btn_no:hover:after {
+  content: ", go away!";
+}
+.footer--btn-container {
+  text-align: center;
+}
+.footer--btn-container a {
+  margin: 0px 10px;
+}
+.blog-item-wrapper article.entry {
+  padding-top: 2vw;
+} /*# sourceMappingURL=cf-custom-OCTOBER2024.min.css.map */
