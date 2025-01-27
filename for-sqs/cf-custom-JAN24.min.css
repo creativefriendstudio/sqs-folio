@@ -65,6 +65,7 @@ body.primary-button-style-solid .sqs-editable-button.sqs-button-element--primary
   transition: all var(--transition);
 }
 
+/*** HEADER ***/
 .header-title-nav-wrapper {
   flex: 1 1 100%;
 }
@@ -109,6 +110,60 @@ header.shrink .header-nav .header-nav-item--homepage a::before {
   top: 5px;
 }
 
+/*** MOBILE TOP BAR ***/
+
+.header-display-mobile .header-title-logo {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+header.shrink .header-title-logo {
+  opacity: 1;
+}
+.header--menu-open .header-title-logo {
+  opacity: 0 !important;
+}
+
+/*** MOBILE POPOUT MENU ***/
+.header-menu .header-menu-nav-item a {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.header-menu .header-menu-nav-item--homepage {
+  width: 230px;
+  height: 145px;
+  text-align: center;
+  margin: 20px auto 20vh;
+  padding: 0px;
+}
+.header-menu .header-menu-nav-item--homepage a {
+  position: relative;
+  visibility: hidden;
+  width: 230px;
+  height: 145px;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+.header-menu .header-menu-nav-item--homepage a:before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: visible;
+  content: "";
+  background: url("https://static1.squarespace.com/static/668f67c966a2cc0e33f133c6/t/6797411073c9b5138dc01020/1737965840195/CF-logo-stacked.png") no-repeat;
+  background-size: contain;
+  width: 230px;
+  height: 145px;
+}
+/* HOME DESKTOP */
+/* hide cta h2 on home */
+@media only screen and (min-width: 768px) {
+  .fe-block-yui_3_17_2_1_1737968510961_5709 h2 {
+    display: none;
+  }
+}
+
+/*** FEAT PROJECT HEADLINES  ***/
 .user-items-list[data-layout-width="inset"] .list-section-title {
   max-width: 65%;
   margin-left: 0px;
@@ -125,10 +180,6 @@ header.shrink .header-nav .header-nav-item--homepage a::before {
   margin: 0px 0px 30px 0px;
   font-size: 1rem !important;
   line-height: 1.2em;
-}
-
-#footer-sections {
-  z-index: 10;
 }
 
 .project-thumb__ctn,
@@ -172,6 +223,14 @@ section.blog-item-summary .blog-excerpt p,
   letter-spacing: var(--body-font-letter-spacing);
   line-height: 1.2em;
 }
+
+.summary-item-list-container a[data-title="Coming soon"] {
+  pointer-events: none;
+}
+.summary-title a {
+  pointer-events: none;
+  margin-top: -5px;
+}
 .blog-meta-section {
   position: absolute;
   top: 10px;
@@ -206,6 +265,10 @@ section.blog-item-summary .blog-excerpt p,
   transform: scale(1);
   transition: all 0.1s ease-in-out;
 }
+
+.entry.tag-comingsoon:hover > .blog-image-wrapper a img {
+  transform: scale(1);
+}
 .entry:hover > .blog-image-wrapper a img {
   transform: scale(1.05);
 }
@@ -222,6 +285,7 @@ section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
 .gallery-reel-item-src {
   width: calc(100% - 20px) !important;
 }
+
 .page-section .content {
   position: relative;
 }
@@ -259,6 +323,10 @@ section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
 
 .user-items-list .arrows-bottom {
   grid-gap: 10px;
+}
+
+.user-items-list-carousel .mobile-arrows {
+  display: none !important;
 }
 
 .user-items-list .user-items-list-carousel__arrow-button {
@@ -308,6 +376,9 @@ section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
 }
 
 /* WORK ALL*/
+.blog-masonry.collection-content-wrapper {
+  padding-bottom: 0px !important;
+}
 .blog-masonry .image-wrapper {
   height: 0px !important;
   padding-bottom: 75% !important;
@@ -338,6 +409,56 @@ article.tag-comingsoon a {
     font-size: 1rem;
   }
 }
+.blog-list-pagination {
+  margin: 50px 0 0 0;
+}
+.blog-list-pagination div a span {
+  display: none;
+}
+
+.blog-list-pagination .newer,
+.blog-list-pagination .older {
+  flex: none;
+}
+
+.blog-list-pagination .newer a,
+.blog-list-pagination .older a {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  border: 1px solid #000;
+  padding: 5px 30px;
+  border-radius: 30px;
+  width: auto;
+  display: flex;
+  margin: 0px;
+  font-size: 1rem !important;
+  background: var(--highlight);
+}
+.blog-list-pagination div a:hover {
+  background: var(--cf-primary);
+  color: var(--light-bg);
+}
+.blog-list-pagination .newer a:after {
+  content: "Fresh projects";
+  display: block;
+  position: relative;
+}
+.blog-list-pagination .older a:before {
+  content: "More projects";
+  display: block;
+  position: relative;
+}
+
+.blog-list-pagination .newer a .icon {
+  padding-right: 6px;
+}
+
+.blog-list-pagination .older a .icon {
+  padding-left: 6px;
+}
+
 /* FOOTER */
 
 footer .Marquee p {
@@ -380,12 +501,66 @@ footer .fe-66985c398e07755d67bb6572 {
   a {
     text-align: center !important;
   }
-
+  .footer--btn-container {
+    display: flex;
+    flex-direction: column;
+  }
   .footer--btn-container a {
     display: inline-block;
-    clear: both;
     margin-left: auto;
     margin-right: auto;
+    min-width: 120px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 2em !important;
+  }
+  h2 {
+    font-size: 1.5em !important;
+  }
+
+  /** HOME MOBILE **/
+  .user-items-list[data-layout-width="inset"] .list-section-title {
+    max-width: 100%;
+  }
+  .user-items-list-simple[data-layout-width="inset"] {
+    max-width: 70%;
+  }
+  .sqs-block-button:not(.sqs-stretched) .sqs-block-button-container--left,
+  .sqs-block-button:not(.sqs-stretched) .sqs-block-button-container--right {
+    justify-content: center;
+  }
+
+  .fe-block-ffa296a36febb91e3adb h2 {
+    display: none;
+  }
+
+  /** PROJECT THUMB META LAYOUT **/
+  .project-thumb__title,
+  section.blog-item-summary h1.blog-title,
+  .sqs-block-summary-v2 .summary-content .summary-title,
+  .sqs-gallery .meta-inside h3.meta-title,
+  .list-item-content .list-item-content__text-wrapper h2.list-item-content__title {
+    text-align: center;
+  }
+
+  /** STUDIO SERVICES CAROUSELS **/
+  .accordion-item__description {
+    min-width: 100% !important;
     margin-bottom: 20px;
+  }
+  .accordion-item__description strong {
+    display: block;
+  }
+
+  .user-items-list .list-section-button-container[data-section-button-alignment="right"] {
+    margin-top: 30px !important;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .user-items-list .list-section-button-container[data-section-button-alignment="right"] a {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
