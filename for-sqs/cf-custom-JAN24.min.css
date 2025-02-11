@@ -59,7 +59,7 @@ h4 {
 }
 body.primary-button-style-solid .sqs-button-element--primary:hover,
 body.primary-button-style-solid .sqs-editable-button.sqs-button-element--primary:hover {
-  background-color: var(--cf-primary);
+  background-color: var(--dark-bg);
   color: var(--light-bg);
   opacity: 1;
   transition: all var(--transition);
@@ -86,6 +86,7 @@ body.primary-button-style-solid .sqs-editable-button.sqs-button-element--primary
 .header-layout-nav-center .header-nav-list a {
   text-transform: uppercase;
 }
+
 .header-layout-nav-center .header-actions {
   display: none;
 }
@@ -156,9 +157,25 @@ header.shrink .header-title-logo {
   height: 145px;
 }
 /* HOME DESKTOP */
+
+.user-items-list-simple .list-item {
+  position: relative;
+}
+.user-items-list-simple .list-item-content__button-container {
+  position: static;
+}
+.user-items-list-simple .list-item-content__button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
 /* hide cta h2 on home */
 @media only screen and (min-width: 768px) {
-  .fe-block-yui_3_17_2_1_1737968510961_5709 h2 {
+  h2.cta {
     display: none;
   }
 }
@@ -198,7 +215,7 @@ section.blog-item-summary h1.blog-title,
   order: 2;
   text-transform: uppercase;
   white-space: nowrap;
-  font-size: var(--small-text-size);
+  font-size: var(--small-text-size) !important;
   font-weight: 400;
   text-align: left;
   margin-top: 5px;
@@ -226,10 +243,15 @@ section.blog-item-summary .blog-excerpt p,
 
 .summary-item-list-container a[data-title="Coming soon"] {
   pointer-events: none;
+  color: var(--dark-bg);
 }
-.summary-title a {
-  pointer-events: none;
+
+.sqs-block-summary-v2 .summary-content .summary-title {
   margin-top: -5px;
+}
+.sqs-block-summary-v2 .summary-item.summary-item-has-tags .summary-content .summary-title a {
+  pointer-events: none;
+  color: var(--dark-bg);
 }
 .blog-meta-section {
   position: absolute;
@@ -313,6 +335,31 @@ section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
 .accordion-item__dropdown p a {
   border-bottom: 1px solid;
 }
+
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:nth-last-child(2) .accordion-item__description,
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:last-child .accordion-item__description {
+  display: flex;
+  min-width: 100% !important;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:nth-last-child(2) .accordion-item__dropdown ul,
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:last-child .accordion-item__dropdown ul {
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:nth-last-child(2) .accordion-item__dropdown ul li,
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:last-child .accordion-item__dropdown ul li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:nth-last-child(2) .accordion-item__dropdown ul[data-rte-list] li > :first-child:before,
+.fe-block-yui_3_17_2_1_1737768160540_122211 li:last-child .accordion-item__dropdown ul[data-rte-list] li > :first-child:before {
+  content: "";
+}
+
 .user-items-list .user-items-list-carousel__slides .list-item-content .list-item-content__text-wrapper .list-item-content__description {
   margin: 0px;
 }
@@ -376,9 +423,9 @@ section.blog-item-summary .blog-excerpt .blog-excerpt-wrapper p {
 }
 
 /* WORK ALL*/
-.blog-masonry.collection-content-wrapper {
+/* .blog-masonry.collection-content-wrapper {
   padding-bottom: 0px !important;
-}
+} */
 .blog-masonry .image-wrapper {
   height: 0px !important;
   padding-bottom: 75% !important;
@@ -409,6 +456,13 @@ article.tag-comingsoon a {
     font-size: 1rem;
   }
 }
+
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+  .tweak-blog-masonry-text-alignment-left .blog-masonry .blog-item-summary {
+    min-height: 120px;
+  }
+}
+
 .blog-list-pagination {
   margin: 50px 0 0 0;
 }
@@ -427,8 +481,8 @@ article.tag-comingsoon a {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.02em;
-  border: 1px solid #000;
-  padding: 5px 30px;
+  border: 0px;
+  padding: 7px 30px;
   border-radius: 30px;
   width: auto;
   display: flex;
@@ -436,9 +490,14 @@ article.tag-comingsoon a {
   font-size: 1rem !important;
   background: var(--highlight);
 }
+
 .blog-list-pagination div a:hover {
-  background: var(--cf-primary);
+  background: var(--dark-bg);
   color: var(--light-bg);
+}
+.blog-masonry .blog-list-pagination a:hover .blog-list-pagination-icon,
+.blog-list-pagination > div > a:hover > .blog-list-pagination-icon {
+  stroke: var(--light-bg) !important;
 }
 .blog-list-pagination .newer a:after {
   content: "Fresh projects";
@@ -491,8 +550,23 @@ footer .fe-66985c398e07755d67bb6572 {
   text-transform: none;
 }
 
+/*** LAPTOP MEDIA QUERY ***/
+
+@media only screen and (max-width: 1024px) {
+  .tweak-blog-masonry-text-alignment-left .blog-masonry .blog-item-summary {
+    min-height: auto;
+    margin-bottom: 30px;
+  }
+
+  /** STUDIO DROPDOWN **/
+  .fe-block-yui_3_17_2_1_1737768160540_122211 li:nth-last-child(2) .accordion-item__dropdown ul,
+  .fe-block-yui_3_17_2_1_1737768160540_122211 li:last-child .accordion-item__dropdown ul {
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 767px) {
   .sqs-html-content,
+  .sqs-block,
   h1,
   h2,
   h3,
@@ -527,9 +601,10 @@ footer .fe-66985c398e07755d67bb6572 {
   .user-items-list-simple[data-layout-width="inset"] {
     max-width: 70%;
   }
+
   .sqs-block-button:not(.sqs-stretched) .sqs-block-button-container--left,
   .sqs-block-button:not(.sqs-stretched) .sqs-block-button-container--right {
-    justify-content: center;
+    justify-content: center !important;
   }
 
   .fe-block-ffa296a36febb91e3adb h2 {
@@ -544,8 +619,12 @@ footer .fe-66985c398e07755d67bb6572 {
   .list-item-content .list-item-content__text-wrapper h2.list-item-content__title {
     text-align: center;
   }
+  /** WORK THUMBS **/
+  .blog-masonry .blog-image-wrapper {
+    margin-bottom: 10px !important;
+  }
 
-  /** STUDIO SERVICES CAROUSELS **/
+  /** STUDIO - SERVICES CAROUSELS **/
   .accordion-item__description {
     min-width: 100% !important;
     margin-bottom: 20px;
@@ -563,4 +642,12 @@ footer .fe-66985c398e07755d67bb6572 {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+body:not(.sqs-layout-editing) .blog-item-top-wrapper {
+  display: none;
+}
+
+#itemPagination {
+  display: none;
 }
